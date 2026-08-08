@@ -1,0 +1,111 @@
+<button onclick="window.location.href='home.html'">
+🏠 Home
+</button>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>GlowMix</title>
+</head>
+
+<body>
+
+<p class="subtitle">Play two sounds at the same time!</p>
+
+<button onclick="playBoth()">▶️ Play Both</button>
+<button onclick="pauseBoth()">⏸ Pause Both</button>
+
+<div class="music-card">
+
+<h2>🎵 Player 1</h2>
+
+<div class="search-area">
+    <input type="text" id="url1" placeholder="Paste a YouTube link here">
+
+    <button onclick="loadVideo1()">Load Video</button>
+
+
+<iframe  id="player1"
+width="560" 
+height="315"
+src="https://www.youtube.com/embed/5xBQqBh_hQ4?enablejsapi=1"
+allow="autoplay; encrypted-media">
+</iframe>
+</div>
+
+<div class="controls">
+    <button onclick="playVideo1()">▶️ Play</button>
+    <button onclick="pauseVideo1()">⏸ Pause</button>
+
+   <label>Volume</label>
+
+<input 
+type="range" 
+min="0" 
+max="100" 
+value="100"
+oninput="changeVolume1(this.value)">
+</div>
+
+<button onclick="loopVideo1()">🔁 Loop</button>
+
+</div>
+
+<div class="music-card">
+
+ <h2>🎵 Player 2</h2>
+
+ <div class="search-area">
+    <input type="text" id="url2" placeholder="Paste a YouTube link here">
+
+    <button onclick="loadVideo2()">Load Video</button>
+</div>
+
+ <iframe  id="player2"
+ width="560" 
+ height="315"
+ src="https://www.youtube.com/embed/n4rAP5vcwUU?enablejsapi=1"
+ allow="autoplay; encrypted-media">
+ </iframe> 
+
+<div class="controls">
+    <button onclick="playVideo2()">▶️ Play</button>
+    <button onclick="pauseVideo2()">⏸ Pause</button>
+    <label>Volume</label>
+
+<input 
+type="range" 
+min="0" 
+max="100"
+value="100"
+oninput="changeVolume2(this.value)">
+</div>
+
+<button onclick="loopVideo2()">🔁 Loop</button>
+
+</div>
+
+
+<div class="save-mix">
+
+    <h2>💾 Save Mix</h2>
+
+    <input
+        type="text"
+        id="mixName"
+        placeholder="Name your mix...">
+
+    <br><br>
+
+    <button onclick="saveMix()">💾 Save Mix</button>
+    <button onclick="showMixes()">📂 My Mixes</button>
+
+    <div id="mixList"></div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>

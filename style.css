@@ -1,0 +1,77 @@
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #ff66cc;
+    font-size: 45px;
+    margin-top: 30px;
+    text-shadow: 0 0 15px #ff66cc;
+}
+.subtitle {
+    color: #cccccc;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+iframe {
+    border-radius: 15px;
+    margin: 15px;
+}
+.music-card {
+    background-color: #222;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 25px;
+    width: fit-content;
+    box-shadow: 0 0 20px #ff66cc
+}
+button {
+    background-color: #ff66cc;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+input {
+    width: 420px;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    margin: 10px;
+    background: #333;
+    color: white;
+}
+
+input::placeholder {
+    color: #999;
+}
+.search-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+button:hover {
+    transform: scale(1.05);
+}
+
+#mixList div {
+    background-color: #222;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 25px;
+    width: 300px;
+    box-shadow: 0 0 20px #ff66cc;
+}
+
+#mixList button {
+    margin: 5px;
+}
