@@ -75,3 +75,864 @@ button:hover {
 #mixList button {
     margin: 5px;
 }
+
+
+.login-box {
+    width: 340px;
+    margin: 35px auto 0;
+    padding: 28px;
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid rgba(255, 20, 147, 0.35);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 20, 147, 0.15);
+}
+
+.login-box h2 {
+    margin-bottom: 22px;
+    font-size: 25px;
+}
+
+.login-box input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin-bottom: 14px;
+
+    background: #111;
+    color: white;
+
+    border: 1px solid #333;
+    border-radius: 10px;
+
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #ff66cc;
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.35);
+}
+
+.login-button,
+.social-button,
+.guest-button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-button {
+    border: none;
+    background: #ff66cc;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+}
+
+.social-button {
+    background: #111;
+    color: white;
+    border: 1px solid #333;
+}
+
+.guest-button {
+    background: transparent;
+    color: #ff66cc;
+    border: 1px solid #ff66cc;
+}
+
+.divider {
+    margin: 20px 0;
+    color: #777;
+}
+
+.signup-text {
+    margin-top: 20px;
+    color: #888;
+    font-size: 14px;
+}
+
+.signup-text span {
+    color: #ff66cc;
+    cursor: pointer;
+}
+.welcome-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 55px;
+    font-weight: bold;
+    color: white;
+    text-shadow:
+        0 0 5px #ff66cc,
+        0 0 15px #ff66cc,
+        0 0 30px #ff66cc;
+}
+
+.tagline {
+    margin-top: 10px;
+    color: #ff66cc;
+    font-size: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 380px;
+    margin: 35px auto 0;
+    padding: 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.login-box input {
+    width: 100%;
+    height: 52px;
+    box-sizing: border-box;
+    margin: 8px 0;
+}
+
+.login-box button {
+    width: 100%;
+    height: 50px;
+    margin: 7px 0;
+    box-sizing: border-box;
+}
+
+.login-button,
+.social-button,
+.guest-button {
+    display: block;
+}
+
+.divider {
+    text-align: center;
+    width: 100%;
+}
+
+.signup-text {
+    text-align: center;
+}
+
+</style>
+
+<style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .welcome-container {
+            width: 100%;
+            max-width: 430px;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .logo {
+    font-size: 58px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: white;
+
+    text-shadow:
+        0 0 5px #ff66cc,
+        0 0 15px #ff66cc,
+        0 0 30px #ff66cc;
+}
+
+.music-note {
+    color: #ff66cc;
+    font-size: 32px;
+    margin-left: 4px;
+
+    text-shadow:
+        0 0 5px #ff66cc,
+        0 0 15px #ff66cc;
+}
+
+        .tagline {
+            margin-top: 10px;
+            color: #ff66cc;
+            font-size: 20px;
+        }
+
+        .login-box {
+    width: 100%;
+    margin-top: 35px;
+    padding: 35px;
+    box-sizing: border-box;
+
+    background: #0b0b0b;
+    border: 1px solid rgba(255, 102, 204, 0.25);
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 25px rgba(255, 102, 204, 0.12),
+        inset 0 0 20px rgba(255, 102, 204, 0.03);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+        .login-box h2 {
+            margin: 0 0 20px;
+            font-size: 26px;
+        }
+
+        .login-box input {
+            width: 100%;
+            height: 52px;
+            padding: 0 15px;
+            margin: 7px 0;
+
+            box-sizing: border-box;
+
+            background: #181818;
+            color: white;
+
+            border: 1px solid #333;
+            border-radius: 10px;
+
+            outline: none;
+            font-size: 15px;
+        }
+
+        .login-box input:focus {
+            border-color: #ff66cc;
+
+            box-shadow:
+                0 0 10px rgba(255, 102, 204, 0.3);
+        }
+
+        .login-box input::placeholder {
+            color: #888;
+        }
+
+        .login-box button {
+            width: 100%;
+            height: 50px;
+            margin: 7px 0;
+
+            box-sizing: border-box;
+
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .login-button {
+            border: none;
+            background: #ff66cc;
+            color: white;
+            font-weight: bold;
+
+            box-shadow:
+                0 0 15px rgba(255, 102, 204, 0.4);
+        }
+
+        .social-button {
+            background: #111;
+            color: white;
+            border: 1px solid #333;
+        }
+
+        .guest-button {
+            background: transparent;
+            color: #ff66cc;
+            border: 1px solid #ff66cc;
+        }
+
+        .login-box button:hover {
+            transform: scale(1.02);
+        }
+
+        .divider {
+            margin: 18px 0;
+            color: #666;
+            text-align: center;
+        }
+
+        .signup-text {
+            margin: 18px 0 0;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .signup-text span {
+            color: #ff66cc;
+            cursor: pointer;
+        }
+</head>
+
+.search-results {
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: 285px;
+    max-height: 285px;
+
+    overflow-y: scroll;
+
+    padding-right: 8px;
+
+    box-sizing: border-box;
+}
+.search-result {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px;
+
+    background: #0b0b0b;
+    border: 1px solid #222;
+    border-radius: 12px;
+
+    transition: 0.2s;
+}
+
+.search-result:hover {
+    border-color: #ff66cc;
+    box-shadow: 0 0 12px rgba(255, 102, 204, 0.2);
+    transform: translateY(-1px);
+}
+
+.search-result img {
+    width: 110px;
+    height: 70px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+.search-result-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.search-result-title {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+.search-result-channel {
+    margin-top: 5px;
+
+    color: #888;
+    font-size: 12px;
+}
+
+.search-result button {
+    width: auto !important;
+    min-width: 45px;
+
+    margin: 0 !important;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #ff66cc;
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 10px rgba(255, 102, 204, 0.25);
+}
+
+.search-result button:hover {
+    transform: scale(1.08);
+}
+/* YouTube search results */
+
+.search-results {
+    margin-top: 15px !important;
+
+    width: 100% !important;
+    height: 285px !important;
+    max-height: 285px !important;
+
+    display: block !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    padding-right: 8px !important;
+    box-sizing: border-box !important;
+}
+
+.search-result {
+    display: flex !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    min-height: 70px !important;
+
+    box-sizing: border-box !important;
+
+    margin-bottom: 10px !important;
+}
+
+.search-results::-webkit-scrollbar {
+    width: 7px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: #111;
+    border-radius: 10px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: #ff66cc;
+    border-radius: 10px;
+}
+
+.close-results {
+    width: 100% !important;
+    height: 35px !important;
+
+    margin: 0 0 10px 0 !important;
+
+    background: transparent !important;
+    color: #ff66cc !important;
+
+    border: 1px solid #ff66cc !important;
+    border-radius: 8px !important;
+
+    cursor: pointer;
+    font-size: 13px !important;
+}
+
+.close-results:hover {
+    background: rgba(255, 102, 204, 0.1) !important;
+}
+
+/* =========================
+   SAVED MIXES
+========================= */
+
+.saved-mix-card {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 12px auto;
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    background: #0b0b0b;
+    border: 1px solid rgba(255, 102, 204, 0.25);
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    box-shadow:
+        0 0 15px rgba(255, 102, 204, 0.08);
+}
+
+
+/* Two tiny videos */
+
+.saved-mix-videos {
+    display: flex;
+    gap: 4px;
+
+    flex-shrink: 0;
+}
+
+.saved-mix-videos img {
+    width: 75px;
+    height: 50px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+}
+
+
+/* Mix name + buttons */
+
+.saved-mix-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.saved-mix-info h3 {
+    margin: 0 0 7px 0;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Buttons */
+
+.saved-mix-info button {
+    width: auto;
+
+    height: 30px;
+
+    padding: 0 9px;
+
+    margin: 2px;
+
+    border-radius: 7px;
+
+    border: 1px solid #333;
+
+    background: #111;
+    color: white;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.saved-mix-info button:hover {
+    border-color: #ff66cc;
+
+    box-shadow:
+        0 0 8px rgba(255, 102, 204, 0.25);
+}
+
+/* Keep saved mixes INSIDE the Save Mix box */
+
+.save-mix {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#mixList {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.saved-mix-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    margin: 12px 0;
+}
+
+/* FIX SAVED MIX OVERFLOW */
+
+.save-mix,
+.save-mix * {
+    box-sizing: border-box;
+}
+
+.save-mix {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+#mixList {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+
+.saved-mix-card {
+    display: flex !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 12px 0 !important;
+    padding: 10px !important;
+
+    overflow: hidden !important;
+}
+
+.saved-mix-videos {
+    flex-shrink: 0 !important;
+}
+
+.saved-mix-info {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* =========================
+   SAVED MIX TILE
+========================= */
+
+#mixList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.saved-mix-card {
+    width: 240px !important;
+    max-width: 240px !important;
+
+    padding: 10px !important;
+    margin: 0 !important;
+
+    box-sizing: border-box;
+
+    background: #0b0b0b;
+    border: 1px solid rgba(255, 102, 204, 0.25);
+    border-radius: 14px;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    gap: 7px;
+
+    overflow: hidden !important;
+}
+
+
+/* TWO VIDEOS */
+
+.saved-mix-videos {
+    display: flex !important;
+    gap: 5px;
+
+    width: 100%;
+    justify-content: center;
+}
+
+.saved-mix-videos img {
+    width: 105px !important;
+    height: 60px !important;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+}
+
+
+/* MIX NAME */
+
+.saved-mix-info {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.saved-mix-info h3 {
+    width: 100%;
+
+    margin: 2px 0 5px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* BUTTONS */
+
+.saved-mix-info button {
+    width: auto !important;
+    height: 28px !important;
+
+    padding: 0 8px !important;
+    margin: 2px !important;
+
+    border-radius: 7px;
+
+    background: #111;
+    color: white;
+
+    border: 1px solid #333;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.saved-mix-info button:hover {
+    border-color: #ff66cc;
+
+    box-shadow:
+        0 0 8px rgba(255, 102, 204, 0.25);
+}
+
+/* FINAL SAVED MIX CENTERING */
+
+#mixList {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-wrap: wrap !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+
+    gap: 15px !important;
+
+    margin: 15px auto 0 !important;
+}
+
+/* Make saved mix tiles slightly bigger */
+
+.saved-mix-card {
+    width: 280px !important;
+    max-width: 280px !important;
+
+    padding: 14px !important;
+}
+
+.saved-mix-videos img {
+    width: 122px !important;
+    height: 70px !important;
+
+    border-radius: 8px;
+}
+
+.saved-mix-info h3 {
+    font-size: 16px !important;
+    margin: 4px 0 7px !important;
+}
+
+/* BIGGER SAVED MIX TILES */
+
+#mixList {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    gap: 20px !important;
+}
+
+.saved-mix-card {
+    width: 320px !important;
+    max-width: 320px !important;
+
+    padding: 18px !important;
+
+    border-radius: 16px !important;
+}
+
+.saved-mix-videos {
+    gap: 7px !important;
+}
+
+.saved-mix-videos img {
+    width: 140px !important;
+    height: 80px !important;
+
+    border-radius: 9px !important;
+}
+
+.saved-mix-info h3 {
+    font-size: 18px !important;
+
+    margin: 6px 0 9px !important;
+}
+
+.saved-mix-info button {
+    height: 35px !important;
+
+    padding: 0 12px !important;
+
+    font-size: 13px !important;
+
+    border-radius: 8px !important;
+}
+
+/* SAVED MIX - VIDEO FOCUSED */
+
+.saved-mix-card {
+    width: 320px !important;
+    max-width: 320px !important;
+
+    padding: 16px !important;
+}
+
+.saved-mix-videos {
+    width: 100% !important;
+
+    gap: 6px !important;
+}
+
+.saved-mix-videos img {
+    width: 145px !important;
+    height: 82px !important;
+
+    border-radius: 9px !important;
+}
+
+.saved-mix-info h3 {
+    font-size: 17px !important;
+
+    margin: 7px 0 6px !important;
+}
+
+/* Smaller controls */
+
+.saved-mix-info button {
+    width: auto !important;
+
+    height: 27px !important;
+
+    padding: 0 7px !important;
+    margin: 1px !important;
+
+    font-size: 10px !important;
+
+    border-radius: 6px !important;
+}
