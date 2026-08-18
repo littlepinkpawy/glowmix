@@ -21,10 +21,20 @@
 <h2>🎵 Player 1</h2>
 
 <div class="search-area">
-    <input type="text" id="url1" placeholder="Paste a YouTube link here">
+
+    <input 
+        type="text" 
+        id="url1" 
+        placeholder="Paste a YouTube link or search YouTube..."
+    >
 
     <button onclick="loadVideo1()">Load Video</button>
 
+    <button onclick="searchYouTube(1)">🔎 Search YouTube</button>
+
+    <div id="results1"></div>
+
+</div>
 
 <iframe  id="player1"
 width="560" 
@@ -57,9 +67,19 @@ oninput="changeVolume1(this.value)">
  <h2>🎵 Player 2</h2>
 
  <div class="search-area">
-    <input type="text" id="url2" placeholder="Paste a YouTube link here">
+
+    <input 
+        type="text" 
+        id="url2" 
+        placeholder="Paste a YouTube link or search YouTube..."
+    >
 
     <button onclick="loadVideo2()">Load Video</button>
+
+    <button onclick="searchYouTube(2)">🔎 Search YouTube</button>
+
+    <div id="results2"></div>
+
 </div>
 
  <iframe  id="player2"
@@ -102,6 +122,18 @@ oninput="changeVolume2(this.value)">
     <button onclick="showMixes()">📂 My Mixes</button>
 
     <div id="mixList"></div>
+
+</div>
+
+<div class="favorites-section">
+
+    <h2>❤️ Favorites</h2>
+
+    <button onclick="toggleFavorites()">
+        ❤️ My Favorites
+    </button>
+
+    <div id="favoritesList"></div>
 
 </div>
 
