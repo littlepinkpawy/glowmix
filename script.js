@@ -631,3 +631,48 @@ function toggleFavorites() {
     }
 
 }
+
+function searchOrLoadVideo1() {
+
+    let input = document.getElementById("url1");
+    let value = input.value.trim();
+
+    if (value === "") {
+        alert("Please search for a video or paste a YouTube link!");
+        return;
+    }
+
+    // Check if it is a YouTube link
+    if (
+        value.includes("youtube.com/watch") ||
+        value.includes("youtu.be/") ||
+        value.includes("youtube.com/shorts/")
+    ) {
+
+        let videoId = "";
+
+        if (value.includes("watch?v=")) {
+            videoId = value.split("watch?v=")[1].split("&")[0];
+        }
+
+        else if (value.includes("youtu.be/")) {
+            videoId = value.split("youtu.be/")[1].split("?")[0];
+        }
+
+        else if (value.includes("youtube.com/shorts/")) {
+            videoId = value.split("youtube.com/shorts/")[1].split("?")[0];
+        }
+
+        if (videoId === "") {
+            alert("I couldn't read that YouTube link.");
+            return;
+        }
+
+        player1.loadVideoById(videoId);
+
+        return;
+    }
+
+    // Otherwise, search YouTube
+    searchYouTube(1);
+}
